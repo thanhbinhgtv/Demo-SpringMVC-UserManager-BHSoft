@@ -36,7 +36,6 @@ public class UsersDAO {
 		Session session = sessionFactory.getCurrentSession();
 		String hql = "from users where id = "+id;
 		UsersEntity users = (UsersEntity) session.createQuery(hql).getSingleResult();
-		
 		return users;
 	}
 	

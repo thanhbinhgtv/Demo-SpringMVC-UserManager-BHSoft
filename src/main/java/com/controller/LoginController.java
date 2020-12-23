@@ -22,6 +22,9 @@ public class LoginController {
 	UsersService userService;
 	@Autowired
 	LoginService loginService;
+	@Autowired
+	UsersController userController;
+	public String Username;
 	
 	@RequestMapping("/")
 	public ModelAndView viewLogin() {
@@ -35,19 +38,20 @@ public class LoginController {
 	}
 	
 	@PostMapping("/checkLogin")
-	public String checkLogin(HttpServletRequest request, Model modelMap , @RequestParam String username, String password) {
+	public ModelAndView checkLogin(HttpServletRequest request, Model modelMap , @RequestParam String username, String password) {
+		
 		if(username == "" || password == "") {
 			modelMap.addAttribute("error", "Không được để trống Username hoặc Password");
-			return "redirect:/";
+			return viewLogin();
 		}else {
 			if(loginService.checkLogin(new UsersEntity(username, password))) {
-				System.out.println("Ok");
 				HttpSession session = request.getSession();
 				session.setAttribute("username", username);
-				return "redirect:/home";
+				Username = username; // Dùng cho method không xóa chính mình
+				return userController.viewHome();
 			}else {
-				modelMap.addAttribute("error", "Sai UserName Hoặc PassWord");
-				return "redirect:/";
+				modelMap.addAttribute("error", "Sai Username Hoặc Password");
+				return viewLogin();
 			}
 		}
 	}
@@ -63,7 +67,10 @@ public class LoginController {
 		if (!password.equals(repassword)) {
 			map.addAttribute("error", "Mật Khẩu Không Trùng Khớp");
 			return "login/register";
-		} else {
+		}if(loginService.checkUserAlready(username)) {
+			map.addAttribute("error", "Username đã tồn tại");
+			return "login/register";
+		}else {
 			if (loginService.register(username, password, email)) {
 				HttpSession session = request.getSession();
 				session.setAttribute("user", username);

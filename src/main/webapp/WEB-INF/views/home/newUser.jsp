@@ -34,6 +34,7 @@
 			<div align="center">
 				<h1>Create User</h1>
 				<a href="home">Home Users</a> <br>
+				<p class="loginhere-link" style="color: red;">${errorNew}</p>
 				<form action="save-user" method="Post">
 					<table border="1" cellpadding="10">
 						<tr>

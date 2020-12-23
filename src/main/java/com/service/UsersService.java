@@ -26,7 +26,7 @@ public class UsersService {
 			String converPass = "";
 		try {
 			converPass = loginService.convertPass(password);
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
@@ -46,13 +46,11 @@ public class UsersService {
 	public void updateUser(int id, String username, String password, String email, String fullName, Integer yearOld,
 			String address, String hobbies, String sex, String level) {
 			String converPass = "";
-			System.out.println(converPass);
 		try {
 			converPass = loginService.convertPass(password);
-		} catch (NoSuchAlgorithmException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
 		UsersEntity user = userDao.userById(id);
 		user.setUserName(username);
 		user.setPassWord(converPass);

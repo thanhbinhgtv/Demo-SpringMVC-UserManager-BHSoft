@@ -33,7 +33,7 @@
 								class="form-submit" value="Login" />
 						</div>
 					</form>
-					<a class="loginhere-link" style="color: red;">${error}</a>
+					<p class="loginhere-link" style="color: red;">${error}</p>
 					<p class="loginhere">
 						No have account ? <a href="register" class="loginhere-link">Register here</a>
 					</p>

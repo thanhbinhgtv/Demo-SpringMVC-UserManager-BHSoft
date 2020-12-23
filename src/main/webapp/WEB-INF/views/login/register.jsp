@@ -39,7 +39,7 @@
 								class="form-submit" value="Sign up" onclick="return confirm('Tạo tài khoản')" />
 						</div>						
 					</form>
-					<a class="loginhere-link" style="color: red;">${error}</a>
+					<p class="loginhere-link" style="color: red;">${error}</p>
 					<p class="loginhere">
 						Have already an account ? <a href=${pageContext.request.contextPath}/ class="loginhere-link">Login Here</a>
 					</p>

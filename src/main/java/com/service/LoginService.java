@@ -1,7 +1,6 @@
 package com.service;
 
 import java.math.BigInteger;
-import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -27,6 +26,18 @@ public class LoginService {
 		for(UsersEntity users : userDAO.listUsers()) {
 			if(user.getUserName().equals(users.getUserName()) & pass.equals(users.getPassWord())) {
 				check = true;
+				break;
+			}
+		}
+		return check;
+	}
+	
+	public boolean checkUserAlready(String username) {
+		boolean check = false;
+		for(UsersEntity users : userDAO.listUsers()) {
+			if(users.getUserName().equals(username)) {
+				check = true;
+				System.out.println(check);
 				break;
 			}
 		}

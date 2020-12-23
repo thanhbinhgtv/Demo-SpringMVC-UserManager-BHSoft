@@ -34,7 +34,7 @@ CREATE TABLE `users` (
   `sex` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `level` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=96 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=135 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +43,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (81,'thanhbinhgtv','54bd100601e935dfcf2240a00bb878ac','thanhbinhgtv@yahoo.com','Phạm Thanh Bình',18,'Thanh Hóa','Music','Male','User'),(82,'thanhbinh','202cb962ac59075b964b07152d234b70','binhptph09268@fpt.edu.vn','Phạm Thanh Bình',18,'Thanh Hóa','Soccer','Male','Admin'),(83,'binhpt_bhsoft','54bd100601e935dfcf2240a00bb878ac','thaobaee@gmail.com','Phạm Thanh Bình',12,'Việt Nam',NULL,'Female','Admin'),(90,'thanhbinhgtv','54bd100601e935dfcf2240a00bb878ac','thanhbinhgtv@yahoo.com','Phạm Thanh Bình',12,'Cầu Giấy','Other','Male','User'),(91,'thanhbinhgtv','4297f44b13955235245b2497399d7a93','thaobaee@gmail.com','Phạm Thanh Bình',1,'','Swimming','Male','User'),(94,'thanhbinhgtv','827ccb0eea8a706c4c34a16891f84e7b','thanhbinhgtv@yahoo.com','Phạm Thanh Bình',13,'Hà Nội','Music','Female','Admin');
+INSERT INTO `users` VALUES (83,'binhpt_bhsoft','a7f5c7ed0356f01e86a97aba152057ba','thaobaee@gmail.com','Phạm Thanh Bình',12,'Việt Nam','Soccer,Music','Female','Admin'),(115,'thanhbinh','202cb962ac59075b964b07152d234b70','thanhbinhgtv@yahoo.com',NULL,NULL,NULL,NULL,NULL,NULL),(127,'thanhbinhgtv','54bd100601e935dfcf2240a00bb878ac','thanhbinhgtv@gmail.com',NULL,NULL,NULL,NULL,NULL,NULL),(129,'123','d9b1d7db4cd6e70935368a1efb10e377','thanhbinhgtv@gmail.com','',NULL,'','Swimming,Other','Male','Admin'),(131,'thanhbinhgtv12','e110fb45bc4f7cc5d367b06bfbc8e5c3','binhptph09268@fpt.edu.vn',NULL,NULL,NULL,NULL,NULL,NULL),(132,'thanhbinh121','76d80224611fc919a5d54f0ff9fba446','thanhbinhgtv@gmail.com',NULL,NULL,NULL,NULL,NULL,NULL),(134,'thanhbinhgtv121','202cb962ac59075b964b07152d234b70','binhptph09268@fpt.edu.vn','',NULL,'',NULL,'','');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-22 15:07:52
+-- Dump completed on 2020-12-23  9:24:41
