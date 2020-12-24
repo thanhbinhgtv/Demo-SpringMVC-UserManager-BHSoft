@@ -44,7 +44,7 @@
 				<h1>Update User</h1>
 				<a href=${pageContext.request.contextPath}/home>Home Users</a> <br>
 				<p class="loginhere-link" style="color: red;">${errorNew}</p>
-				<form action="<c:url value="update"/>" modelAttribute="listUser" method="Post">
+				<form action="<c:url value="/update"/>" modelAttribute="listUser" method="Post">
 					<table border="1" cellpadding="10" style="width: 600px;">
 						<tr>
 							<td>ID</td>
