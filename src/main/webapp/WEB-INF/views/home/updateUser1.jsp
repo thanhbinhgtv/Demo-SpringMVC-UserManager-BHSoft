@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>NewUser</title>
+<title>Update</title>
 <link rel="stylesheet" href='<c:url  value="/resources/css/main.css" />'>
 
 <link rel="stylesheet"
@@ -41,10 +41,10 @@
 	<section id="main">
 		<article class="col">
 			<div align="center">
-				<h1>Create User</h1>
+				<h1>Update User</h1>
 				<a href=${pageContext.request.contextPath}/home>Home Users</a> <br>
 				<p class="loginhere-link" style="color: red;">${errorNew}</p>
-				<form:form action="/XML_SpringMVC/update" modelAttribute="listUser" method="Post">
+				<form action="<c:url value="update"/>" modelAttribute="listUser" method="Post">
 					<table border="1" cellpadding="10" style="width: 600px;">
 						<tr>
 							<td>ID</td>
@@ -111,7 +111,7 @@
 							<td colspan="2" style="text-align: center;"><button type="submit" style="width: 100px;">Update</button></td>
 						</tr>
 					</table>
-				</form:form>
+				</form>
 			</div>
 		</article>
 	</section>
