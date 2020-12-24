@@ -26,17 +26,17 @@ public class UsersController {
 	LoginController log;
 	@Autowired
 	LoginService loginService;
-	
+
 	@RequestMapping("/home")
 	public ModelAndView viewHome() {
-		ModelAndView modelAndView = new ModelAndView("home/home");
+		ModelAndView modelAndView = new ModelAndView("home/home1");
 		modelAndView.addObject("listUsers", userDAO.listUsers());
 		return modelAndView;
 	}
 	
-	@RequestMapping("/new-user")
+	@RequestMapping("/newUser")
 	public ModelAndView viewNewUser() {
-		ModelAndView modelAndView = new ModelAndView("home/newUser");
+		ModelAndView modelAndView = new ModelAndView("home/newUser1");
 		return modelAndView;
 	}
 	
@@ -45,11 +45,26 @@ public class UsersController {
 			String address, String hobbies, String sex, String level, ModelMap map) {
 		if(loginService.checkUserAlready(username)) {
 			map.addAttribute("errorNew", "Username đã tồn tại");
-			return "home/newUser";
+			return "home/newUser1";
 		}else {
 			userService.saveUser(username, password, email, fullName, yearOld, address, hobbies, sex, level);
 			return "redirect:/home";
 		}
+	}
+	
+	@RequestMapping("/updateUser/{id}")
+	public ModelAndView viewUpdateUser(@PathVariable(name = "id") int id) {
+		ModelAndView modelAndView = new ModelAndView("home/updateUser1");
+		UsersEntity user = userDAO.userById(id);
+		modelAndView.addObject("listUser", user);
+		return modelAndView;
+	}
+	
+	@PostMapping("/update")
+	public String updateUser(@RequestParam int id, String username, String password, String email, String fullName, Integer yearOld,
+			String address, String hobbies, String sex, String level) {
+		userService.updateUser(id, username, password, email, fullName, yearOld, address, hobbies, sex, level);
+		return "redirect:/home";
 	}
 	
 	@RequestMapping("/delete/{id}")
@@ -64,25 +79,11 @@ public class UsersController {
 		}
 	}
 	
-	@RequestMapping("/updateUser/{id}")
-	public ModelAndView viewUpdateUser(@PathVariable(name = "id") int id) {
-		ModelAndView modelAndView = new ModelAndView("home/updateUser");
-		UsersEntity user = userDAO.userById(id);
-		modelAndView.addObject("listUser", user);
-		return modelAndView;
-	}
-	@PostMapping("/update")
-	public String updateUser(@RequestParam int id, String username, String password, String email, String fullName, Integer yearOld,
-			String address, String hobbies, String sex, String level) {
-		userService.updateUser(id, username, password, email, fullName, yearOld, address, hobbies, sex, level);
-		return "redirect:/home";
-	}
 	@RequestMapping("/view/{id}")
 	public ModelAndView viewUser(@PathVariable(name = "id") int id) {
-		ModelAndView modelAndView = new ModelAndView("home/viewUser");
+		ModelAndView modelAndView = new ModelAndView("home/viewUser1");
 		UsersEntity user = userDAO.userById(id);
 		modelAndView.addObject("listView", user);
 		return modelAndView;
 	}
-	
 }

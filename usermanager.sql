@@ -34,7 +34,7 @@ CREATE TABLE `users` (
   `sex` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `level` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=135 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=145 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +43,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (83,'binhpt_bhsoft','a7f5c7ed0356f01e86a97aba152057ba','thaobaee@gmail.com','Phạm Thanh Bình',12,'Việt Nam','Soccer,Music','Female','Admin'),(115,'thanhbinh','202cb962ac59075b964b07152d234b70','thanhbinhgtv@yahoo.com',NULL,NULL,NULL,NULL,NULL,NULL),(127,'thanhbinhgtv','54bd100601e935dfcf2240a00bb878ac','thanhbinhgtv@gmail.com',NULL,NULL,NULL,NULL,NULL,NULL),(129,'123','d9b1d7db4cd6e70935368a1efb10e377','thanhbinhgtv@gmail.com','',NULL,'','Swimming,Other','Male','Admin'),(131,'thanhbinhgtv12','e110fb45bc4f7cc5d367b06bfbc8e5c3','binhptph09268@fpt.edu.vn',NULL,NULL,NULL,NULL,NULL,NULL),(132,'thanhbinh121','76d80224611fc919a5d54f0ff9fba446','thanhbinhgtv@gmail.com',NULL,NULL,NULL,NULL,NULL,NULL),(134,'thanhbinhgtv121','202cb962ac59075b964b07152d234b70','binhptph09268@fpt.edu.vn','',NULL,'',NULL,'','');
+INSERT INTO `users` VALUES (83,'binhpt_bhsoft','66902c233c060b683ddeda163fdcb775','thaobaee@gmail.com','Phạm',12,'Việt Nam',NULL,'Female','Admin'),(115,'thanhbinh','202cb962ac59075b964b07152d234b70','thanhbinhgtv@yahoo.com','Bình 4',12,'Hà Nội','Other','Male','Admin'),(129,'123','d9b1d7db4cd6e70935368a1efb10e377','thanhbinhgtv@gmail.com','',NULL,'','Swimming,Other','Male','Admin'),(135,'thanhbinh11','6512bd43d9caa6e02c990b0a82652dca','thanhbinhgtv@yahoo.com',NULL,NULL,NULL,NULL,NULL,NULL),(137,'thanhbinhgtv111','202cb962ac59075b964b07152d234b70','thanhbinhgtv@yahoo.com','',NULL,'',NULL,'Female','User'),(138,'thanhbinhgtv333','202cb962ac59075b964b07152d234b70','thanhbinhgtv@yahoo.com','',NULL,'','Soccer','',''),(142,'thanhbinhgtvqw','202cb962ac59075b964b07152d234b70','thanhbinhgtv@yahoo.com','Bình 4',12,'Hà Nội','Music','Female','Admin'),(143,'thanhbinhgtv1234','d9b1d7db4cd6e70935368a1efb10e377','thanhbinhgtv@gmail.com','Bình 4',15,'Hà Nội','Soccer,Music','Female','Admin');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -56,4 +56,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-23  9:24:41
+-- Dump completed on 2020-12-24 11:00:46

@@ -3324,7 +3324,7 @@
 			right: 0;
 			text-align: right;
 			top: 0;
-			vertical-align: middle;
+			/* vertical-align: middle; */
 			width: 5em;
 		}
 
@@ -3578,10 +3578,6 @@
 	#main {
 		padding: 4em 0 2em 0;
 	}
-	#main table{
-		padding: 200px;
-		width: 50%;
-	}
 
 	#one {
 		padding: 6em 0 4em 0;
@@ -3749,8 +3745,9 @@
 	#footer {
 		background-color: #e5474b;
 		color: #f2a3a5;
-		padding: 4em 0 2em 0;
-		background: #e5474b;
+		padding: 2em 0 2em 0;
+		background: #292020;
+		
 	}
 
 		#footer input, #footer select, #footer textarea {
@@ -3952,6 +3949,13 @@
 			}
 
 		}
+		@media screen and (max-width: 980px) {
+
+			#footer {
+				padding: 4em 0 2em 0;
+			}
+
+		}
 
 		@media screen and (max-width: 736px) {
 
@@ -3960,6 +3964,3 @@
 			}
 
 		}
-		
-		
-		
